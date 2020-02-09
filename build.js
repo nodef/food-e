@@ -32,10 +32,15 @@ function load() {
 };
 
 load().then((rows) => {
+  var c = 'code,names,type,status'+os.EOL;
   var z = `const CORPUS = new Map([${os.EOL}`;
-  for(var row of rows)
+  rows.sort((a, b) => parseInt(a.code.substring(1), 10)-parseInt(b.code.substring(1), 10));
+  for(var row of rows) {
+    c += `${row.code},${row.names},${row.type},${row.status}`+os.EOL;
     z += `  ["${row.code}", ${JSON.stringify(row)}],${os.EOL}`;
+  }
   z += `]);${os.EOL}`;
   z += `module.exports = CORPUS;${os.EOL}`;
+  fs.writeFileSync('index.csv', c);
   fs.writeFileSync('corpus.js', z);
 });
