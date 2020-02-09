@@ -1,5 +1,7 @@
 # food-e
 
+[![NPM](https://nodei.co/npm/food-e.png)](https://nodei.co/npm/food-e/)
+
 **E numbers** are codes for substances that are permitted to be used as [food additives]
 for use within the [European Union] and [EFTA]. The "E" stands for "Europe". Commonly
 found on [food labels], their safety assessment and approval are the responsibility
