@@ -1,10 +1,14 @@
 {
   "name": "food-e",
-  "version": "0.1.4",
+  "version": "1.0.1",
   "description": "E numbers are codes for substances that are permitted to be used as food additives for use within the European Union and EFTA.",
   "main": "index.js",
   "scripts": {
     "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/food-e.git"
   },
   "keywords": [
     "food",
@@ -18,10 +22,14 @@
   ],
   "author": "wolfram77@gmail.com",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodef/food-e/issues"
+  },
+  "homepage": "https://github.com/nodef/food-e#readme",
   "devDependencies": {
-    "csv": "^2.0.0"
+    "csv": "^5.3.1"
   },
   "dependencies": {
-    "lunr": "^2.1.6"
+    "lunr": "^2.3.8"
   }
 }
