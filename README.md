@@ -10,6 +10,10 @@ agents.
 
 ```javascript
 const foode = require('food-e');
+// foode.corpus: Map {code => {code, names, type, status}}
+// foode.load(): true (corpus loaded)
+// foode.sql([table], [options]): sql commands
+// foode.csv(): path to csv file
 // foode(<query text>)
 // -> [{code, names, type, status}]
 

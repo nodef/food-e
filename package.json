@@ -1,6 +1,6 @@
 {
   "name": "food-e",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "E numbers are codes for substances that are permitted to be used as food additives for use within the European Union and EFTA.",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,7 @@
     "csv": "^5.3.1"
   },
   "dependencies": {
-    "lunr": "^2.3.8"
+    "lunr": "^2.3.8",
+    "sql-extra": "^0.1.13"
   }
 }
