@@ -4,7 +4,7 @@ const fs = require('fs');
 const os = require('os');
 
 function read(file, fn) {
-  var fpath = path.join('data', file);
+  var fpath = path.join('assets', file);
   if(!fs.existsSync(fpath)) return Promise.resolve();
   return new Promise((fres) => {
     var stream = fs.createReadStream(fpath).pipe(csv.parse({columns: true}));
