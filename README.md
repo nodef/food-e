@@ -1,4 +1,4 @@
-**E numbers** are codes for substances that are permitted to be used as [food additives]
+[E numbers] are codes for substances that are permitted to be used as [food additives]
 for use within the [European Union] and [EFTA]. The "E" stands for "Europe". Commonly
 found on [food labels], their safety assessment and approval are the responsibility
 of the [European Food Safety Authority].
@@ -39,8 +39,12 @@ foode('riboflavin');
 //     type: 'color (Yellow-orange)',
 //     status: 'e u' } ]
 ```
+<br>
+<br>
 
+[![nodef](https://merferry.glitch.me/card/food-e.svg)](https://nodef.github.io)
 
+[E numbers]: https://en.wikipedia.org/wiki/E_number
 [food additives]: https://en.wikipedia.org/wiki/Food_additive
 [European Union]: https://en.wikipedia.org/wiki/European_Union
 [EFTA]: https://en.wikipedia.org/wiki/European_Free_Trade_Association
