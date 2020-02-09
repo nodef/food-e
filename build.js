@@ -1,6 +1,7 @@
 const csv = require('csv');
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
 
 function read(file, fn) {
   var fpath = path.join('data', file);
@@ -30,4 +31,11 @@ function load() {
   return Promise.all(rdy).then(() => z);
 };
 
-load().then((rows) => fs.writeFileSync('data.json', JSON.stringify(rows)));
+load().then((rows) => {
+  var z = `const CORPUS = new Map([${os.EOL}`;
+  for(var row of rows)
+    z += `  ["${row.code}", ${JSON.stringify(row)}],${os.EOL}`;
+  z += `]);${os.EOL}`;
+  z += `module.exports = CORPUS;${os.EOL}`;
+  fs.writeFileSync('corpus.js', z);
+});
