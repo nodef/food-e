@@ -11,7 +11,7 @@ var index = lunr(function() {
     this.add(row);
 });
 function foode(txt) {
-  txt = txt.replace(/^\s*e?\s*(\d\d\d+)\s*([a-z])?\s*$/i, 'e$1$2');
+  txt = txt.replace(/(^|\s+)e?\s*(\d\d\d+)\s*([a-z])?(\s+|$)/gi, ' e$2$3 ');
   var mats = index.search(txt), z = [];
   for(var mat of mats)
     z.push(corpus.get(mat.ref));
