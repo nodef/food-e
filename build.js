@@ -27,7 +27,7 @@ function load() {
   var rdy = [], z = [];
   for(var i=100; i<=1000; i++)
     rdy.push(read(`e${i}.csv`, (row) => z.push(convert(row))));
-  return Promise.all(rdy);
+  return Promise.all(rdy).then(() => z);
 };
 
 load().then((rows) => fs.writeFileSync('data.json', JSON.stringify(rows)));
