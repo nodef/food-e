@@ -7,8 +7,8 @@ var index = lunr(function() {
   this.field('names');
   this.field('type');
   this.field('status');
-  for(var row of corpus.values())
-    this.add(row);
+  for(var r of corpus.values())
+    this.add({code: r.code, names: r.names, type: r.type, status: r.status.replace(/(\w)/g, 'status_$1')});
 });
 function foode(txt) {
   txt = txt.replace(/(^|\s+)e?\s*(\d\d\d+)\s*([a-z])?(\s+|$)/gi, ' e$2$3 ');
