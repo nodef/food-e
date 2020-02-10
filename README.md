@@ -70,10 +70,7 @@ foode('riboflavin');
 //     names: 'Riboflavin-5-Sodium Phosphate',
 //     type: 'color (Yellow)',
 //     status: '' },
-//   { code: 'E101',
-//     names: 'Riboflavin (Vitamin B2), formerly called lactoflavin',
-//     type: 'color (Yellow-orange)',
-//     status: 'e u' } ]
+//   ... ]
 ```
 
 ### reference
