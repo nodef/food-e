@@ -75,19 +75,24 @@ foode('riboflavin');
 
 ### reference
 
-```javascript
-foode.corpus // Map {code => {code, names, type, status}}
-foode.load() // true (corpus loaded)
-foode.sql([table], [options]) // sql commands
-foode.csv()  // path to csv file
-foode(query)
-// -> [{code, names, type, status}]
-```
+| Method              | Action
+|---------------------|-------
+| [foode]             | Lists matching food additives.
+| [load]              | Preloads food additive data (before use).
+| [sql]               | Gives commands to insert data to SQL database.
+| [csv]               | Gives path of data CSV file.
+| [corpus]            | Keeps food additive data. {field}
+
 <br>
 <br>
 
 [![nodef](https://merferry.glitch.me/card/food-e.svg)](https://nodef.github.io)
 
+[foode]: https://github.com/nodef/food-e/wiki
+[load]: https://github.com/nodef/food-e/wiki/load
+[sql]: https://github.com/nodef/food-e/wiki/sql
+[csv]: https://github.com/nodef/food-e/wiki/csv
+[corpus]: https://github.com/nodef/food-e/wiki/corpus
 [E numbers]: https://en.wikipedia.org/wiki/E_number
 [food additives]: https://en.wikipedia.org/wiki/Food_additive
 [European Union]: https://en.wikipedia.org/wiki/European_Union
