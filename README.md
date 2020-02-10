@@ -8,14 +8,46 @@ Having a single unified list for food additives was first agreed upon in 1962 wi
 antioxidants and 1974 for the emulsifiers, stabilisers, thickeners and gelling
 agents.
 
+
+## console
+
+```bash
+foode "E101a"
+# E101a: Riboflavin-5'-Phosphate
+# .type: color (Yellow-orange); .status: e
+
+foode "101 a"
+# E101a: Riboflavin-5'-Phosphate
+# .type: color (Yellow-orange); .status: e
+
+foode "riboflavin"
+# E101a: Riboflavin-5'-Phosphate
+# .type: color (Yellow-orange); .status: e
+#
+# E106: Riboflavin-5-Sodium Phosphate
+# .type: color (Yellow); .status: 
+# ...
+```
+
+### reference 
+
+```bash
+foode [options] <query>
+# query: code, name, type, or status of food additive
+# Options:
+# --help: show this help
+# --silent: hide error messages
+
+# Environment variables:
+$FOODE_SILENT # hide error messages (0)
+```
+<br>
+
+
+## javascript
+
 ```javascript
 const foode = require('food-e');
-// foode.corpus: Map {code => {code, names, type, status}}
-// foode.load(): true (corpus loaded)
-// foode.sql([table], [options]): sql commands
-// foode.csv(): path to csv file
-// foode(<query text>)
-// -> [{code, names, type, status}]
 
 foode('E101a');
 // [ { code: 'E101a',
@@ -42,6 +74,17 @@ foode('riboflavin');
 //     names: 'Riboflavin (Vitamin B2), formerly called lactoflavin',
 //     type: 'color (Yellow-orange)',
 //     status: 'e u' } ]
+```
+
+### reference
+
+```javascript
+foode.corpus // Map {code => {code, names, type, status}}
+foode.load() // true (corpus loaded)
+foode.sql([table], [options]) // sql commands
+foode.csv()  // path to csv file
+foode(query)
+// -> [{code, names, type, status}]
 ```
 <br>
 <br>
