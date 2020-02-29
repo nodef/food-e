@@ -36,7 +36,7 @@ load().then((rows) => {
   var z = `const CORPUS = new Map([${os.EOL}`;
   rows.sort((a, b) => parseInt(a.code.substring(1), 10)-parseInt(b.code.substring(1), 10));
   for(var row of rows) {
-    c += `${row.code},${row.names},${row.type},${row.status}`+os.EOL;
+    c += `${row.code},"${row.names}","${row.type}",${row.status}`+os.EOL;
     z += `  ["${row.code}", ${JSON.stringify(row)}],${os.EOL}`;
   }
   z += `]);${os.EOL}`;
