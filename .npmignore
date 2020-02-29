@@ -1,7 +1,6 @@
 # build
-build.js
-
-# source
+assets/
 index.txt
 index.csv
-assets/
+build.js
+bundle.js
