@@ -1,6 +1,6 @@
 {
   "name": "food-e",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "E numbers are codes for substances that are permitted to be used as food additives for use within the European Union and EFTA.",
   "main": "index.js",
   "preferGlobal": true,
@@ -31,7 +31,10 @@
   },
   "homepage": "https://github.com/nodef/food-e#readme",
   "devDependencies": {
-    "csv": "^5.3.1"
+    "csv": "^5.3.1",
+    "find-npm-prefix": "^1.0.2",
+    "recast": "^0.18.7",
+    "tempy": "^0.4.0"
   },
   "dependencies": {
     "lunr": "^2.3.8",
