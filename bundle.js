@@ -77,10 +77,10 @@ function readmeHeading(pth) {
 function scatterReadme(pth, o) {
   console.log('scatterReadme:', pth, o);
   var d = fs.readFileSync(pth, 'utf8');
-  d = d.replace(o.note_top||/\s+```/, '<br>'+EOL+
+  d = d.replace(o.note_top||/\s+(##|```)/, '<br>'+EOL+
     `> This is part of package [${o.package_root}].`+EOL+EOL+
     `[${o.package_root}]: https://www.npmjs.com/package/${o.package_root}`+EOL+EOL+
-    (o.note_topvalue||'```')
+    (o.note_topvalue||'$1')
   );
   fs.writeFileSync(pth, d);
 }
@@ -158,14 +158,14 @@ function minifyReadme(pth, o) {
   console.log('minifyReadme: ', pth, o);
   var d = fs.readFileSync(pth, 'utf8');
   d = d.replace(o.note_minified||/^> .*?minified.*$/m, '');
-  d = d.replace(o.note_top||/\s+```/, '<br>'+EOL+
+  d = d.replace(o.note_top||/\s+(##|```)/, '<br>'+EOL+
     `> This is browserified, minified version of [${o.package}].<br>`+EOL+
     `> It is exported as global variable **${o.standalone}**.<br>`+EOL+
     `> CDN: [unpkg], [jsDelivr].`+EOL+EOL+
     `[${o.package}]: https://www.npmjs.com/package/${o.package}`+EOL+
     `[unpkg]: https://unpkg.com/${o.package}.min`+EOL+
     `[jsDelivr]: https://cdn.jsdelivr.net/npm/${o.package}.min`+EOL+EOL+
-    (o.note_topvalue||'```')
+    (o.note_topvalue||'$1')
   );
   fs.writeFileSync(pth, d);
 }

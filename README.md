@@ -1,7 +1,7 @@
 [E numbers] are codes for substances that are permitted to be used as [food additives]
-for use within the [European Union] and [EFTA]. The "E" stands for "Europe". Commonly
-found on [food labels], their safety assessment and approval are the responsibility
-of the [European Food Safety Authority].
+for use within the [European Union] and [EFTA]. Commonly found on [food labels],
+their safety assessment and approval are the responsibility of the
+[European Food Safety Authority].
 
 Having a single unified list for food additives was first agreed upon in 1962 with
 [food colouring]. In 1964, the directives for preservatives were added, 1970 for
@@ -84,9 +84,10 @@ foode('riboflavin');
 | [corpus]            | Keeps food additive data. {field}
 
 <br>
-<br>
 
 [![nodef](https://merferry.glitch.me/card/food-e.svg)](https://nodef.github.io)
+
+> Browserified, minified version of this package is [food-e.min].
 
 [foode]: https://github.com/nodef/food-e/wiki
 [load]: https://github.com/nodef/food-e/wiki/load
@@ -100,3 +101,4 @@ foode('riboflavin');
 [food labels]: https://en.wikipedia.org/wiki/Food_label
 [European Food Safety Authority]: https://en.wikipedia.org/wiki/European_Food_Safety_Authority
 [food colouring]: https://en.wikipedia.org/wiki/Food_colouring
+[food-e.min]: https://www.npmjs.com/package/food-e.min
