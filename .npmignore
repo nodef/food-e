@@ -1,6 +1,7 @@
-# build
+# Build
+.travis.yml
+.coveralls.yml
 assets/
 index.txt
-index.csv
 build.js
 bundle.js

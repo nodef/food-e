@@ -2,9 +2,8 @@ language: node_js
 node_js:
   - "node"
 before_install:
-  - echo "access=public" >> ~/.npmrc
-  - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
-before_script:
-  - npm install -g download-cli browserify uglify-es
-  - npm install
-script: node ./bundle
+- git clone https://${GITHUB_TOKEN}@github.com/nodef/deploy "$HOME/deploy"
+- chmod 777 "$HOME/deploy/"*.sh
+- bash "$HOME/deploy/before_install.sh"
+script:
+- bash "$HOME/deploy/script.sh"
