@@ -89,6 +89,8 @@ foode('riboflavin');
 
 > Browserified, minified version of this package is [food-e.min].
 
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/food-e)
+
 [foode]: https://github.com/nodef/food-e/wiki
 [load]: https://github.com/nodef/food-e/wiki/load
 [sql]: https://github.com/nodef/food-e/wiki/sql
